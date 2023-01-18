@@ -6,6 +6,7 @@ import br.com.customers.presenters.CustomerPresenter;
 import br.com.customers.services.CustomerService;
 //import io.swagger.annotations.Api;
 import java.util.List;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,7 @@ import static java.util.stream.Collectors.toList;
 
 
 @RestController
-//@Api(value = "Customers", tags = { "Customers" })
+@Tag(name = "Customers")
 @RequestMapping("/v1")
 public class CustomerController {
 	

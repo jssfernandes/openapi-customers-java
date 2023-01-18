@@ -2,18 +2,18 @@ package br.com.customers.controllers.parameters;
 
 import br.com.customers.models.Address;
 import br.com.customers.models.Customer;
-//import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class CustomerParameter implements Serializable {
-//	@ApiModelProperty(value = "full name of the customer", example = "Luciana Benedita Aurora Santos", position = 1)
+	@Schema(description = "full name of the customer", example = "Luciana Benedita Aurora Santos")
 	private String name;
-//	@ApiModelProperty(value = "document number of the customer", example = "654.916.421-42", position = 2)
+	@Schema(description = "document number of the customer", example = "654.916.421-42")
 	private String document;
-//	@ApiModelProperty(value = "List of the addresses of the customer", dataType = "List", position = 3)
+	@Schema(name = "address", description = "List of the addresses of the customer", type = "List", format = "list")
 	private List<AddressParameter> address;
 
 	public String getName() {
